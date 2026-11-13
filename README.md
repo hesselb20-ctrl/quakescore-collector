@@ -1,9 +1,10 @@
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/hero-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/hero-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/hero-dark.svg">
-  <img src=".github/assets/hero-light.svg" width="100%" alt="QuakeScore collector. Measures building vibration in a phone's browser. Prototype, driven with simulated sensor input only. Never run on a real phone.">
-</picture>
+# QuakeScore Collector
+
+Measures building vibration in a phone's browser.
+
+<img src=".github/assets/figure.webp" width="100%" alt="3D waterfall chart. Power spectra for three frequency bands, one colour each, pile up as measurement windows are averaged; the jagged noise floor settles and the test tones stand out at 1.3 and 7.0 hertz. Three bars then show the page's code matching the Python reference far below the test limit.">
+
+<sub>Produced by the page's own `dsp.js` on a synthetic sensor stream, and checked by `test_dsp.mjs` in the quakescore repository. Never run on a real phone.</sub>
 
 <picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-01-dark.svg">
@@ -51,13 +52,6 @@ QuakeScore repository, which also holds the tests.
   <img src=".github/assets/rule-03-light.svg" width="100%" alt="03 How it works">
 </picture>
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/flow-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/flow-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/flow-dark.svg">
-  <img src=".github/assets/flow-light.svg" width="100%" alt="Data flow. In the browser: devicemotion readings with gravity, about 60 a second, a typed building name, floor and charging box, and a 10-second rate probe that picks a 100 or 200 Hz grid. On the phone: resampling and FIR decimation into bands at 50, 12.5 and 3.125 Hz, a 120-second warm-up with a flat check and levelling, a movement gate, and 2048-point Hann windows averaged per band. For the user: one upload schema v1 JSON file of about 200 kB with no location, saved by download or share sheet, and a snapshot in local storage every 60 seconds.">
-</picture>
-
 1. **Set up.** The user types a building name and a floor and ticks whether the phone is charging.
    On iPhone the page asks for motion permission on that tap. The building is stored as
    `test:<name>`.
@@ -77,15 +71,6 @@ QuakeScore repository, which also holds the tests.
    `quakescore_test-<name>_<UTC date>_<time>.json`. It is saved as a download or through the share
    sheet. While recording, a snapshot is kept in the browser's local storage every 60 seconds, so
    "Save the last session again" can recover it.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/scene-dark.gif">
-  <img src=".github/assets/scene-light.gif" width="100%" alt="A phone lies flat on a grid with its x, y and z sensor axes lighting in turn, in front of three upright panels for the 3.125, 12.5 and 50 Hz bands, each showing an averaged spectrum with a cursor sweeping across it and a test tone near 1.3 Hz.">
-</picture>
-
-<sub>The three bands and 2048-point windows are the constants in `dsp.js`. The spectra are what this
-page's code produced from the synthetic test stream `stream_c` in the QuakeScore repository, not a
-real building. The test tone is part of that synthetic stream.</sub>
 
 <picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-04-dark.svg">
