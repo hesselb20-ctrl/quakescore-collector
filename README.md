@@ -79,6 +79,15 @@ QuakeScore repository, which also holds the tests.
    "Save the last session again" can recover it.
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/scene-dark.gif">
+  <img src=".github/assets/scene-light.gif" width="100%" alt="A phone lies flat on a grid with its x, y and z sensor axes lighting in turn, in front of three upright panels for the 3.125, 12.5 and 50 Hz bands, each showing an averaged spectrum with a cursor sweeping across it and a test tone near 1.3 Hz.">
+</picture>
+
+<sub>The three bands and 2048-point windows are the constants in `dsp.js`. The spectra are what this
+page's code produced from the synthetic test stream `stream_c` in the QuakeScore repository, not a
+real building. The test tone is part of that synthetic stream.</sub>
+
+<picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-04-dark.svg">
   <source media="(max-width: 600px)" srcset=".github/assets/rule-mobile-04-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rule-04-dark.svg">
