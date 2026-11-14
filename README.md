@@ -6,12 +6,7 @@ Measures building vibration in a phone's browser.
 
 <sub>Produced by the page's own `dsp.js` on a synthetic sensor stream, and checked by `test_dsp.mjs` in the quakescore repository. Never run on a real phone.</sub>
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-01-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/rule-mobile-01-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rule-01-dark.svg">
-  <img src=".github/assets/rule-01-light.svg" width="100%" alt="01 What it is">
-</picture>
+## What it is
 
 The QuakeScore collector is a single web page that records how a building vibrates, using a phone
 lying flat and still inside it. It reads the phone's motion sensor while the page is open, turns the
@@ -23,12 +18,7 @@ run on a real phone.
 
 **Open it on a phone:** https://hesselb20-ctrl.github.io/quakescore-collector/
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-02-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/rule-mobile-02-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rule-02-dark.svg">
-  <img src=".github/assets/rule-02-light.svg" width="100%" alt="02 Why it exists">
-</picture>
+## Why it exists
 
 **The problem.** [QuakeScore](https://github.com/hesselb20-ctrl/quakescore) estimates a building's
 vibration from phones at rest inside it. Every result in that project so far comes from a simulator.
@@ -45,12 +35,7 @@ This repository is the hosted copy. The five page files are byte-identical to
 [`web/collector/`](https://github.com/hesselb20-ctrl/quakescore/tree/main/web/collector) in the
 QuakeScore repository, which also holds the tests.
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-03-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/rule-mobile-03-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rule-03-dark.svg">
-  <img src=".github/assets/rule-03-light.svg" width="100%" alt="03 How it works">
-</picture>
+## How it works
 
 1. **Set up.** The user types a building name and a floor and ticks whether the phone is charging.
    On iPhone the page asks for motion permission on that tap. The building is stored as
@@ -72,12 +57,7 @@ QuakeScore repository, which also holds the tests.
    sheet. While recording, a snapshot is kept in the browser's local storage every 60 seconds, so
    "Save the last session again" can recover it.
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-04-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/rule-mobile-04-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rule-04-dark.svg">
-  <img src=".github/assets/rule-04-light.svg" width="100%" alt="04 Capabilities">
-</picture>
+## Capabilities
 
 What the code does today. All of it has been checked with simulated input only.
 
@@ -113,12 +93,7 @@ fed with simulated sensor readings.
 - One night from one phone usually shows the phone's own noise level and rarely a building mode.
   It is a screening measurement, not an engineering assessment of any building.
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-05-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/rule-mobile-05-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rule-05-dark.svg">
-  <img src=".github/assets/rule-05-light.svg" width="100%" alt="05 Quick start">
-</picture>
+## Quick start
 
 On a phone, open https://hesselb20-ctrl.github.io/quakescore-collector/. That step was not run
 here, because no phone was available. Browsers give motion data only to pages served over https or
@@ -154,12 +129,7 @@ Reading session files on a computer with `experiments/inspect_sessions.py` is de
 [collector README](https://github.com/hesselb20-ctrl/quakescore/blob/main/web/collector/README.md).
 It was not run here.
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-06-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/rule-mobile-06-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rule-06-dark.svg">
-  <img src=".github/assets/rule-06-light.svg" width="100%" alt="06 Stack, status, roadmap">
-</picture>
+## Stack, status, roadmap
 
 **Stack**
 
@@ -195,11 +165,6 @@ Android, how long a phone keeps the page awake, and battery cost.
 To update the hosted page, copy changed files from `web/collector/` in QuakeScore into this
 repository.
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset=".github/assets/rule-mobile-07-dark.svg">
-  <source media="(max-width: 600px)" srcset=".github/assets/rule-mobile-07-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/rule-07-dark.svg">
-  <img src=".github/assets/rule-07-light.svg" width="100%" alt="07 License">
-</picture>
+## License
 
 No license file yet. All rights reserved until one is added.
