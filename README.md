@@ -57,6 +57,10 @@ QuakeScore repository, which also holds the tests.
    sheet. While recording, a snapshot is kept in the browser's local storage every 60 seconds, so
    "Save the last session again" can recover it.
 
+<img src=".github/assets/figure-how.webp" width="100%" alt="Phone-motion samples snap onto a 100 Hz grid, the filter curves split the signal into three bands, and a 3-second spike above the movement limit removes two band windows.">
+
+<sub>Computed with the page's own code and filter taps (<code>fir_taps.js</code>) on a synthetic test stream. Never run on a real phone.</sub>
+
 ## Capabilities
 
 What the code does today. All of it has been checked with simulated input only.
@@ -92,6 +96,10 @@ fed with simulated sensor readings.
 - The floor is typed by hand. Battery level is recorded only where the browser exposes it.
 - One night from one phone usually shows the phone's own noise level and rarely a building mode.
   It is a screening measurement, not an engineering assessment of any building.
+
+<img src=".github/assets/figure-more.webp" width="100%" alt="A block of 288 tiles of raw readings shrinks into 37 tiles of averaged spectra, then four empty slots show zero raw readings, audio, location and network calls.">
+
+<sub>Counts from running the page's code on a synthetic stream; the file also holds the building name and floor you type. The page's source has no network calls. Never run on a real phone.</sub>
 
 ## Quick start
 
